@@ -1,55 +1,87 @@
 <% layout("/layouts/boilerplate") -%>
 <body>
-    <div class="row mt-3">
-        <div class="col-8 offset-2">
-    <h3>Create a new listing</h3>
-    <form method="post" action="/listings" novalidate class="needs-validation">
+  <div class="row mt-3">
+    <div class="col-8 offset-2">
+      <h3>Create a new listing</h3>
+      <form
+        method="post"
+        action="/listings"
+        novalidate
+        class="needs-validation"
+        enctype="multipart/form-data"
+      >
         <div class="mb-3">
-            <label for="title" class="form-label-dark ">Title</label>
-            <input name="listing[title]" id="title" placeholder="Add a title" class="form-control" required>
-            <div class="valid-feedback">
-                Title Looks good!
-              </div>
+          <label for="title" class="form-label-dark">Title</label>
+          <input
+            name="listing[title]"
+            id="title"
+            placeholder="Add a title"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">Title Looks good!</div>
         </div>
         <div class="mb-3">
-            <label for="description" class="form-label-dark">description</label>
-            <textarea name="listing[description]" id="description" class="form-control" required></textarea>
-            <div class="invalid-feedback">
-                Please enter a short description.
-              </div>
+          <label for="description" class="form-label-dark">description</label>
+          <textarea
+            name="listing[description]"
+            id="description"
+            class="form-control"
+            required
+          ></textarea>
+          <div class="invalid-feedback">Please enter a short description.</div>
         </div>
         <div class="mb-3">
-            <label for="image" class="form-label-dark t">Image Link</label>
-            <input name="listing[image]" id="image" placeholder="enter image URL/Link"class="form-control">
-        </div>  
+          <label for="image" class="form-label-dark t"
+            >Upload Listing Image</label
+          >
+          <input
+            type="file"
+            name="listing[image]"
+            id="image"
+            class="form-control"
+          />
+        </div>
         <div class="row">
-            <div class="mb-3 col-md-4">
-                <label for="price" class="form-label-dark ">Price</label>
-                <input name="listing[price]" id="price" placeholder="1200"  class="form-control" required>
-            </div>  
-            
-            <div class="mb-3 col-md-8">
-                <label for="country" class="form-label-dark ">Country</label>
-                <input name="listing[country]" id="country" placeholder="India" class="form-control" required>
-                <div class="invalid-feedback">
-                    Country name should be valid.
-                  </div>
-            </div>
+          <div class="mb-3 col-md-4">
+            <label for="price" class="form-label-dark">Price</label>
+            <input
+              name="listing[price]"
+              id="price"
+              placeholder="1200"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="mb-3 col-md-8">
+            <label for="country" class="form-label-dark">Country</label>
+            <input
+              name="listing[country]"
+              id="country"
+              placeholder="India"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">Country name should be valid.</div>
+          </div>
         </div>
         <div class="mb-3">
-            <label for="location" class="form-label-dark ">Location</label>
-            <input name="listing[location]" id="location" placeholder="Jammu,Jammu & Kashmir" class="form-control" required>
-            <div class="invalid-feedback">
-                Please choose a location.
-              </div>
+          <label for="location" class="form-label-dark">Location</label>
+          <input
+            name="listing[location]"
+            id="location"
+            placeholder="Jammu,Jammu & Kashmir"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Please choose a location.</div>
         </div>
-        <br>
+        <br />
         <button class="btn btn-dark mt-3">Add</button>
-
-    </form>
-    <br>
-    <br>
+      </form>
+      <br />
+      <br />
     </div>
-    </div>
-    
+  </div>
 </body>

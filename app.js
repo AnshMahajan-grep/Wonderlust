@@ -1,3 +1,8 @@
+if (process.env.Node_ENV != "productiom") {
+  require("dotenv").config();
+}
+// console.log(process.env.SECRET);
+
 const express = require("express");
 const app = express();
 const port = 8080;
